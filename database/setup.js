@@ -9,7 +9,7 @@ const db = new Sequelize({
 });
 
 // User Model
-const User = db.define('User', {
+const Hero = db.define('Hero', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
@@ -19,15 +19,7 @@ const User = db.define('User', {
         type: DataTypes.STRING,
         allowNull: false
     },
-    email: {
-        type: DataTypes.STRING,
-        allowNull: false,
-        unique: true
-    },
-    password: {
-        type: DataTypes.STRING,
-        allowNull: false
-    },
+    
     // TODO: Add role field (employee, manager, admin)
      role: {
         type: DataTypes.STRING,
@@ -40,7 +32,7 @@ const User = db.define('User', {
 });
 
 // Project Model
-const Project = db.define('Project', {
+const Project = db.define('', {
     id: {
         type: DataTypes.INTEGER,
         primaryKey: true,
